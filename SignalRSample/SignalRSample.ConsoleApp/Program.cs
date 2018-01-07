@@ -12,7 +12,7 @@ namespace SignalRSample.ConsoleApp
 {
     public class Program
     {
-        private static ILogger logger = CreateLogger("Program");
+        private static readonly ILogger logger = CreateLogger("Program");
 
         public static void Main(string[] args)
         {
