@@ -17,8 +17,8 @@ namespace SignalRSample.ConsoleApp
         public static void Main(string[] args)
         {
             var cancellationTokenSource = new CancellationTokenSource();
-
-            MainAsync(cancellationTokenSource.Token).GetAwaiter().GetResult();
+            
+            Task.Run(() => MainAsync(cancellationTokenSource.Token).GetAwaiter().GetResult(), cancellationTokenSource.Token);
             
             Console.WriteLine("Press Enter to Exit ...");
             Console.ReadLine();
