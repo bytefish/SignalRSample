@@ -12,8 +12,6 @@ namespace SignalRSample.Web
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSockets();
-
             services.AddSignalR();
 
             services.AddCors(o =>
